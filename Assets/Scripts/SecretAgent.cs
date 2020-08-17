@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cop : MonoBehaviour, Person
+public class SecretAgent : MonoBehaviour, Person
 {
     private Vector2 moveSpot;
     public Transform tr;
@@ -12,7 +12,7 @@ public class Cop : MonoBehaviour, Person
     public float maxY;
     public float speed;
 
-    void Start()
+    void Awake()
     {
         moveSpot = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
     }
@@ -24,7 +24,7 @@ public class Cop : MonoBehaviour, Person
 
     public void spawn()
     {
-
+        tr.position = Vector2.zero;
     }
 
     public void move()
@@ -38,7 +38,7 @@ public class Cop : MonoBehaviour, Person
 
     public void die()
     {
-
+        gameObject.SetActive(false);
     }
 
     

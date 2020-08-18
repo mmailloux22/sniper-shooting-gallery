@@ -24,7 +24,11 @@ public class SecretAgent : MonoBehaviour, Person
 
     public void spawn()
     {
-        tr.position = Vector2.zero;
+        if (!gameObject.activeInHierarchy)
+        {
+            gameObject.SetActive(true);
+            tr.position = Vector2.zero;
+        }
     }
 
     public void move()

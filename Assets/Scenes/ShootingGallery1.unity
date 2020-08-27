@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009f54f5e2137c04a9c5215b71579347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personObject: {fileID: 185040232}
   tr: {fileID: 185040235}
   minX: -16
   maxX: 16
@@ -421,9 +422,9 @@ MonoBehaviour:
   civilian: {fileID: 185040232}
   target: {fileID: 1856294130}
   population: 40
-  civilianPercent: 45
+  civilianPercent: 70
   targetPercent: 5
-  secretAgentPercent: 50
+  secretAgentPercent: 25
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +519,8 @@ GameObject:
   - component: {fileID: 540683571}
   - component: {fileID: 540683570}
   - component: {fileID: 540683572}
+  - component: {fileID: 540683573}
+  - component: {fileID: 540683574}
   m_Layer: 0
   m_Name: crosshair
   m_TagString: Untagged
@@ -603,6 +606,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
+--- !u!58 &540683573
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540683569}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
+--- !u!50 &540683574
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540683569}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.014210584
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &906928877
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,6 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 542b36daf8ae77f4b9de58410054a45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personObject: {fileID: 906928877}
   tr: {fileID: 906928879}
   minX: -16
   maxX: 16
@@ -930,6 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4401e35cb5b3c9a4d9f4ac1365461223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personObject: {fileID: 1856294130}
   tr: {fileID: 1856294132}
   minX: -16
   maxX: 16
